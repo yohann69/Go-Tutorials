@@ -22,7 +22,17 @@ func main() {
 		log.Fatal(err)
 	}
 
+	// A slice of names
+	names := []string{"Yohann", "Manu", "Samantha"}
+
+	// Request greeting message for the names
+	messages, err := greetings.Hellos(names)
+
 	// If no error was returned, print the returned message
 	// to the console.
 	fmt.Println(message)
+
+	// If no error was returned, print the returned map of
+	// messages to the console.
+	fmt.Println(messages)
 }
